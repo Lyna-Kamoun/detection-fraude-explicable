@@ -1,5 +1,18 @@
 # Détection de fraude par carte bancaire explicable
 
+## En bref
+
+Application web et API qui classent les transactions par carte bancaire par niveau de risque, signalent les plus suspectes dans un budget d'alertes quotidien et expliquent chaque alerte avec SHAP.
+
+- **Données :** 1 852 394 transactions simulées (0,52 % de fraudes)
+- **Résultats sur la période de test (XGBoost) :** PR-AUC 0,90, rappel 95,1 %, précision 40,8 %, coût évité 96,1 %
+- **Démo :** [application](https://detection-fraude-explicable.streamlit.app) · [API](https://detection-fraude-api.onrender.com/docs)
+- **Technologies :** Python, XGBoost, SHAP, Streamlit, FastAPI, pytest
+
+*English summary:* Explainable credit-card fraud detection on 1.85 M simulated transactions. XGBoost reaches a PR-AUC of 0.90 and 95% recall on the test period. The alert threshold is set by minimizing a cost expressed in amounts, and each alert is explained with SHAP. Includes a Streamlit app and a FastAPI service, both deployed.
+
+## Présentation
+
 Application web interactive, service d'API et analyses pour la détection de fraude sur des transactions par carte bancaire.
 Projet du cours Data Mining pour la finance (ENSI, 2026-2027), Challenge 2.
 
